@@ -24,7 +24,7 @@ public class BlogsViewer extends AppCompatActivity {
              WebView vulnerable =(WebView) findViewById(R.id.loads);
             WebSettings webSettings = vulnerable.getSettings();
             webSettings.setJavaScriptEnabled(true);
-            webSettings.setAllowFileAccessFromFileURLs(true);
+            webSettings.setAllowFileAccessFromFileURLs(false);
             vulnerable.setWebChromeClient(new WebChromeClient());
             WebViewClientImpl webViewClient = new WebViewClientImpl(this);
             vulnerable.setWebViewClient(webViewClient);
@@ -35,8 +35,8 @@ public class BlogsViewer extends AppCompatActivity {
             WebSettings webSettings = vulnerable.getSettings();
             webSettings.setJavaScriptEnabled(true);
             webSettings.setAllowFileAccess(true);
-            webSettings.setAllowFileAccessFromFileURLs(true);
-            webSettings.setAllowUniversalAccessFromFileURLs(true);
+            webSettings.setAllowFileAccessFromFileURLs(false);
+            webSettings.setAllowUniversalAccessFromFileURLs(false);
             vulnerable.setWebChromeClient(new WebChromeClient());
             WebViewClientImpl webViewClient = new WebViewClientImpl(this);
             vulnerable.setWebViewClient(webViewClient);

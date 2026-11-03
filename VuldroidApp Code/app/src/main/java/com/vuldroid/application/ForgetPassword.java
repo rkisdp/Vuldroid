@@ -10,7 +10,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-public class ForgetPassword extends AppCompatActivity {
+public class ForgetPassword extends SecureBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

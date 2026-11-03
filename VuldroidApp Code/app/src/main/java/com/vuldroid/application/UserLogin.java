@@ -13,7 +13,7 @@ import android.view.WindowManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class UserLogin extends AppCompatActivity {
+public class UserLogin extends SecureBaseActivity {
 
     @Override
     public void onBackPressed() {

@@ -22,8 +22,8 @@ public class YoutubeViewer extends AppCompatActivity {
         WebSettings webSettings = vulnerable.getSettings();
         webSettings.setAllowFileAccess(true);
         webSettings.setJavaScriptEnabled(true);
-        webSettings.setAllowFileAccessFromFileURLs(true);
-        webSettings.setAllowUniversalAccessFromFileURLs(true);
+        webSettings.setAllowFileAccessFromFileURLs(false);
+        webSettings.setAllowUniversalAccessFromFileURLs(false);
         vulnerable.setWebChromeClient(new WebChromeClient());
         WebViewClientImpl webViewClient = new WebViewClientImpl(this);
         vulnerable.setWebViewClient(webViewClient);
