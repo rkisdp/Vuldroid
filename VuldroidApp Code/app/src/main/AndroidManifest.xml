@@ -6,24 +6,27 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="false"
+        android:networkSecurityConfig="@xml/network_security_config">
         <activity android:name=".RootDetection"></activity>
         <activity
             android:name=".RoutingActivity"
-            android:exported="true" />
+            android:exported="false"
+            android:taskAffinity=""
+            android:launchMode="singleTask" />
         <activity android:name=".EmailViewer" />
 
         <receiver
             android:name=".MyReceiver"
             android:enabled="true"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.example.Broadcast" />
             </intent-filter>
@@ -32,7 +35,10 @@
         <activity
             android:name=".NotesViewer"
             android:exported="false" />
-        <activity android:name=".BlogsViewer">
+        <activity
+            android:name=".BlogsViewer"
+            android:taskAffinity=""
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -47,7 +53,10 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name=".YoutubeViewer">
+        <activity
+            android:name=".YoutubeViewer"
+            android:taskAffinity=""
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -56,7 +65,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".RequestPassword" />
-        <activity android:name=".ForgetPassword">
+        <activity
+            android:name=".ForgetPassword"
+            android:taskAffinity=""
+            android:launchMode="singleTask">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -74,7 +86,10 @@
         <activity android:name=".Signup" />
         <activity android:name=".Login" />
         <activity android:name=".UserLogin" />
-        <activity android:name=".SplashScreen">
+        <activity
+            android:name=".SplashScreen"
+            android:taskAffinity=""
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

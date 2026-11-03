@@ -22,7 +22,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class NotesViewer extends AppCompatActivity {
+public class NotesViewer extends SecureBaseActivity {
 
     private static final String FILE_NAME = "example.txt";
     EditText mEditText;
